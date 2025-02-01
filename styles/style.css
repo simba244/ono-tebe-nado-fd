@@ -37,16 +37,19 @@
     gap: 12px;
 }
 .cover {
+    width: auto;
+    height: 500px;
+    padding: 40px;
     display: grid;
     flex-direction: row;
     align-items: baseline;
+    grid-template-rows: 1fr 100px;
     background-image: url(../images/cover.jpg) 
 
 
 }
 
 .cover-title {
-    height: 800px;
     color: #fff;
     font-family: 'Raleway' , sans-serif;
     font-weight: 100;
@@ -71,6 +74,7 @@
 .description {
     display: flex;
     justify-content: space-between;
+
     padding: 16px;
     width: 100%;
     color: #fff;
