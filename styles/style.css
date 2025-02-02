@@ -263,9 +263,40 @@
 }
 
 /* ниже секция с футером*/
+
 .footer {
     display: grid;
+    height: 600px;
     padding: 24px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: rgb(29, 212, 127)
+}
+
+.footer-adress {
+    grid-column: 1 / 2;
+    max-width: 240px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    grid-column: 2 / 3;
+}
+
+.footer-menu-list {
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.footer-social-list-item {
+    list-style-type: none;
+    display: flex;
+    justify-content: end; 
+    gap: 24px;
+}
+
+
+.footer-social-icon {
+    width: 48px;
 }
