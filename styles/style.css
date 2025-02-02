@@ -6,7 +6,7 @@
     padding: 50px;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
-    background-color: #5fb7ff;
+    background-color: #fff;
 }
 
 .header-menu-list {
@@ -44,6 +44,7 @@
     flex-direction: row;
     align-items: baseline;
     grid-template-rows: 1fr 100px;
+    position: relative;
     background-image: url(../images/cover.jpg) 
 
 
@@ -54,24 +55,45 @@
     font-family: 'Raleway' , sans-serif;
     font-weight: 100;
     font-size: 100px;
+    display: block;
+    position: relative;
+    z-index: 2;
 
 }
 
 .span{
     display: block;
+
 }
 
 .span-center {
+
     text-align: center;
 }
 
 .span-right{
+
     text-align: right;
     padding-right: 67px;
 }
 
+.overlay-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    grid-template-columns: 1 / -1;
+    grid-template-rows: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.6); /* Черный цвет с прозрачностью 60% */
+    z-index: 1;
+}
+
+
 /* вот эта штука норм получилась можно будет в грид*/
 .description {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
 
@@ -88,8 +110,8 @@
     color: #fff;
     background-color: transparent;
     border: 2px solid rgb(255, 255, 255);
-
 }
+
 
 /* ниже секция с карточками*/
 
@@ -127,42 +149,7 @@
 
 
 .card {
-
-}
-
-/* собираю карточку на флексе */
-
-/* мой код 
-.lots-one-card {
-    width: 340px;
-    height: 596px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 20px;
-    list-style: none;
-    border: 5px solid #000000;
-}
-*/
-
-
-/* мой код 
-.card_type_film-img {
-    height: auto;
-    width: auto;
-    background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
     position: relative;
-    width: 140%;
-    height: 100%;
-    object-fit: cover;
-}
-*/
-
-
-.lots-one-card {
     width: 340px;
     height: 596px;
     display: flex;
@@ -170,20 +157,109 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-image: url(../images/card-lot-01.jpg);
-    background-size: cover;
-    background-position: center;
+    /* Вырезал фон отсюда*/
     list-style: none;
     border: 5px solid #000000;
 }
 
 
+.card-type-film {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/card-lot-01.jpg);
+    background-size: cover;
+    background-position: center;
+    /* по заданию нужен тег артикль, но в итоге получилось лишняя вложенность и лишние классы — как этот например*/
+}
+
+.lots-title-card {
+    /*Тут стилёчки для всех заголовков карточек + их расположение внутри карточки*/
+    padding: 24px;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+}
+
+
+.lots-text-card {
+    /*Тут стилёчки для всех текстов карточек + их расположение внутри карточки*/
+    padding: 24px;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Черный цвет с прозрачностью 60% */
+    z-index: 1;
+}
+
+.card-type-book {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/card-lot-02.jpg);
+    background-size: cover;
+    background-position: center;
+    /* по заданию нужен тег артикль, но в итоге получилось лишняя вложенность и лишние классы — как этот например*/
+}
+
+
+.card-type-picture {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/card-lot-03.jpg);
+    background-size: cover;
+    background-position: center;
+    /* по заданию нужен тег артикль, но в итоге получилось лишняя вложенность и лишние классы — как этот например*/
+}
 
 
 .button-lots {
     grid-row: 3;
     grid-column: 1 ;
     align-self: flex-start;
+}
+
+/* секция about*/
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    grid-template-rows: repeat(3, min-content);
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.about-logo {
+    grid-row: 1;
+    grid-column: 1;
+    width: 240px;
+    height: 240px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    border-radius: 600px;
+    background-color: #000000;
+}
+
+.about-logo-image {
+    width: 148px;
+    height: 100%;
+}
+
+.about-title {
+    grid-row: 1;
+    grid-column: 2 / 5;
+}
+
+.about-text {
+    grid-row: 2;
+    grid-column: 2 / 5;
 }
 
 /* ниже секция с футером*/
