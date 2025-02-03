@@ -56,7 +56,6 @@
     max-width: 240px;
     justify-self: end;
     gap: 4px;
-
     font-family: Raleway;
     font-style: normal;
     font-size: 18px;
@@ -64,47 +63,52 @@
     color: #000;
 }
 
-
+/* Секция с главной обложкой*/
 
 .cover {
     width: auto;
-    height: 500px;
-    padding: 40px;
+    height: 757px;
     display: grid;
     flex-direction: row;
     align-items: baseline;
-    grid-template-rows: 1fr 100px;
+    grid-template-rows: 1fr 118px;
     position: relative;
-    background-image: url(../images/cover.jpg) 
-
+    background-image: url(../images/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
 .cover-title {
     color: #fff;
     font-family: 'Raleway' , sans-serif;
-    font-weight: 100;
+    font-weight: 700;
     font-size: 100px;
-    display: block;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
     position: relative;
     z-index: 2;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .span{
-    display: block;
-
+    display: flex;
+    justify-content: start;
+    padding: 164px 0 0 50px;
 }
 
 .span-center {
-
     text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 18px 0 0 28px;
 }
 
 .span-right{
-
-    text-align: right;
-    padding-right: 67px;
+    display: flex;
+    justify-content: end;
+    padding: 18px 20px 0 0;
 }
 
 .overlay-cover {
@@ -120,26 +124,41 @@
 }
 
 
-/* вот эта штука норм получилась можно будет в грид*/
+
 .description {
-    position: relative;
     z-index: 2;
     display: flex;
     justify-content: space-between;
-
-    padding: 16px;
+    align-items: center;
+    padding: 16px 50px 0 50px;
     width: 100%;
     color: #fff;
     font-size: 25px;
 }
 
+.description-text {
+    font-family: 'Raleway' , sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 1,9em.;
+    word-spacing: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
 
 .button {
-    padding: 20px 20px 20px;
+    display: flex;
+    justify-content: end;
+    padding: 10px 30px 10px 30px;
     outline: none; 
     color: #fff;
     background-color: transparent;
     border: 2px solid rgb(255, 255, 255);
+    font-family: 'Raleway' , sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
 
@@ -147,19 +166,26 @@
 
 /* грид с тремя строками и тремя колонками. Сделаю в хераре заголовок, в середине карточки, а в футере кнопку */
 .lots {
+    margin-top: 180px;
+    padding: 0 24px 0 24px;
     width: 100%;
 	height: 723px;
     display: grid;
-    grid-template-columns: repeat(3, min-content);
-    grid-template-rows: repeat(3, min-content);
-    align-items: flex-start;
-    justify-content: flex-start;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.titile-stile {
+    font-family: 'Raleway' , sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
 }
 
 .lots-title {
     grid-row: 1;
     grid-column: 1 / 3;
     align-self: flex-start;
+    padding:  0 0 28px 40px;
 }
 
 .lots-left-span {
@@ -170,53 +196,58 @@
     grid-row: 2;
     grid-column: 1 / 3;
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    gap: 40px;
+    gap: 25px;
     list-style: none;
-    align-self: flex-end;
+
 }
 
 
 .card {
     position: relative;
-    width: 340px;
+    width: 334px;
     height: 596px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     /* Вырезал фон отсюда*/
     list-style: none;
-    border: 5px solid #000000;
 }
 
 
 .card-type-film {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 40px 48px 40px;
     width: 100%;
     height: 100%;
     background-image: url(../images/card-lot-01.jpg);
     background-size: cover;
     background-position: center;
-    /* по заданию нужен тег артикль, но в итоге получилось лишняя вложенность и лишние классы — как этот например*/
 }
 
+/*Тут стилёчки для всех заголовков карточек + их расположение внутри карточки*/
 .lots-title-card {
-    /*Тут стилёчки для всех заголовков карточек + их расположение внутри карточки*/
-    padding: 24px;
     z-index: 2;
     position: relative;
     color: #fff;
+    font-family: 'Raleway' , sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 
-
+/*Cтилёчки для всех текстов карточек + их расположение внутри карточки*/
 .lots-text-card {
-    /*Тут стилёчки для всех текстов карточек + их расположение внутри карточки*/
-    padding: 24px;
     z-index: 2;
     position: relative;
     color: #fff;
+    font-family: 'Raleway' , sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+
 }
 
 .overlay {
@@ -230,66 +261,85 @@
 }
 
 .card-type-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
+    padding: 48px 40px 48px 40px;
     background-image: url(../images/card-lot-02.jpg);
     background-size: cover;
     background-position: center;
     /* по заданию нужен тег артикль, но в итоге получилось лишняя вложенность и лишние классы — как этот например*/
 }
 
-
+/* Возможно надо было создать один класс карточки с общими настройками флекса и паддингов, а бэграунды уже каждой отдельно...*/
 .card-type-picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
+    padding: 48px 40px 48px 40px;
     background-image: url(../images/card-lot-03.jpg);
     background-size: cover;
     background-position: center;
     /* по заданию нужен тег артикль, но в итоге получилось лишняя вложенность и лишние классы — как этот например*/
 }
 
-
-.button-lots {
-    grid-row: 3;
-    grid-column: 1 ;
-    align-self: flex-start;
+/*повозился с подчеркиванием...ребята в чате советовали поменять на ссылку, но я решил оствить кнопку*/
+.button-black {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+    padding: 10px 30px 10px 40px;
+    color: #000000;
+    border: none;
+    background-color: transparent;
+    font-family: 'Raleway' , sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-thickness: .5px;
+    text-underline-offset: 4px;
+    text-transform: lowercase;
 }
 
 /* секция about*/
 
 .about {
+    margin-top: 120px;
+    padding: 0 24px 0 24px;
+    width: 100%;
+	height: 723px;
     display: grid;
-    grid-template-columns: repeat(3, min-content);
-    grid-template-rows: repeat(3, min-content);
-    align-items: flex-start;
-    justify-content: flex-start;
+    grid-template-columns: 360px 1fr;
 }
 
+
+
 .about-logo {
-    grid-row: 1;
-    grid-column: 1;
+    margin: 16px 0 0 20px;
     width: 240px;
     height: 240px;
     display: flex;
     justify-content: center; 
-    align-items: center; 
     border-radius: 600px;
     background-color: #000000;
 }
 
 .about-logo-image {
     width: 148px;
-    height: 100%;
+    height: 240px;
 }
 
 .about-title {
-    grid-row: 1;
-    grid-column: 2 / 5;
+    grid-column: 2;
 }
 
 .about-text {
-    grid-row: 2;
-    grid-column: 2 / 5;
+
+    grid-column: 2;
 }
 
 /* ниже секция с футером*/
