@@ -240,7 +240,7 @@
 }
 
 /*Cтилёчки для всех текстов карточек + их расположение внутри карточки*/
-.lots-text-card {
+.text-card {
     z-index: 2;
     position: relative;
     color: #fff;
@@ -293,7 +293,7 @@
     justify-content: end;
     margin-top: 20px;
     padding: 10px 30px 10px 40px;
-    color: #000000;
+    color: #000;
     border: none;
     background-color: transparent;
     font-family: 'Raleway' , sans-serif;
@@ -319,13 +319,13 @@
 
 
 .about-logo {
-    margin: 16px 0 0 20px;
+    margin: 36px 0 0 48px;
     width: 240px;
     height: 240px;
     display: flex;
     justify-content: center; 
     border-radius: 600px;
-    background-color: #000000;
+    background-color: #000;
 }
 
 .about-logo-image {
@@ -333,28 +333,53 @@
     height: 240px;
 }
 
+/* Заголовок и текст изначально были в разных ячейках. Но потом понял что это не лучший вариант. Переделываю на флексы
+По итогу класс about-title оказался лишним.*/
+
 .about-title {
-    grid-column: 2;
+    margin-top: 138px;
+    display: flex;
+    flex-direction: column;
+    color: #000;
 }
 
-.about-text {
-
-    grid-column: 2;
+.about-title-card {
+    margin-bottom: 70px;
 }
+
+.about-text-card {
+    padding-top: 28px;
+    color: #000;
+    font-family: 'Raleway' , sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* Что-то по итогу странная штука с текстом получилась, удалось через марджины выровнять, но наверное есть более
+элегантный способ*/
+
 
 /* ниже секция с футером*/
 
 .footer {
     display: grid;
     height: 600px;
-    padding: 24px;
+    padding: 52px 50px 60px 50px;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: rgb(29, 212, 127)
+    background-color: #fff;
 }
 
 .footer-adress {
     grid-column: 1 / 2;
-    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    max-width: 260px;
+    gap: 4px;
+    font-family: Raleway;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24,3px;
+    color: #000;
 }
 
 .footer-menu {
@@ -366,7 +391,16 @@
 .footer-menu-list {
     list-style-type: none;
     text-align: center;
+    text-transform: lowercase;
+    font-family: Raleway;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24,3px;
+    color: #000;
+    text-underline-offset: 4px;
 }
+
+
 
 
 .footer-social-list-item {
