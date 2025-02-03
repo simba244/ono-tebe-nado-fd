@@ -3,41 +3,59 @@
 
 .header {
     display: grid;
-    padding: 50px;
+    padding: 92px 50px 96px 50px;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
     background-color: #fff;
 }
 
-.header-menu-list {
+.header-menu {
     display: flex;
-    justify-content: center;
-    gap: 45px;
-    list-style-type: circle;
+    grid-column: 1 / 2;
 }
 
-.header-menu-link .header-menu-item-active {
-    list-style-type: none;
-    text-decoration: none;
+.header-menu-list {
+    display: flex;
+    justify-content: start; 
+    gap: 34px;
+    list-style-type: circle;
+    text-transform: lowercase;
+    font-family: Raleway;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24,3px;
+    color: #000;
+    text-underline-offset: 4px;
 }
+
+
+
+.header-menu-item-active {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.text-decoration {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
 
 .header-logo {
     display: block;
-    width: 148px;
+    width: 134px;
 }
 
 .header-logo-image {
     width: 100%;
 }
 
-
-
 .header-adress {
     display: flex;
     flex-direction: column;
     max-width: 240px;
     justify-self: end;
-    gap: 12px;
+    gap: 4px;
 
     font-family: Raleway;
     font-style: normal;
