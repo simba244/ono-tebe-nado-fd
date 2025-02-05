@@ -1,6 +1,8 @@
 /* 
-Привет, Валерия 👋 Я два раза одно и тоже залил видимо, так как комментарии одни и те же
-Спасибо за прошлое ревью 🫶 
+Привет, Валерия 👋 
+Я два раза одно и тоже залил видимо, так как комментарии одни и те же. 
+Возможно не так запушил...Еще раз все проверил, все должно быть окей.
+Спасибо за прошлые ревью 🫶 
 
 По стилям:
 1. Проверил ошибки в коде
@@ -61,7 +63,7 @@
     list-style-type: none;
 }
 
-.text-decoration {
+.address-link {
     text-underline-offset: 4px;
 }
 
@@ -79,7 +81,7 @@
     flex-direction: column;
     max-width: 240px;
     justify-self: end;
-    gap: 4px;
+    gap: 4px 0 ;
     font-family: "Raleway", sans-serif;
     font-style: normal;
     font-size: 18px;
@@ -135,7 +137,7 @@
     padding: 18px 20px 0 0;
 }
 
-.overlay-cover {
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -218,7 +220,7 @@
     position: relative;
     flex-direction: column;
     justify-content: space-between;
-    padding: 48px 40px 48px 40px;
+    padding: 46px 40px 48px 40px;
     background-size: cover;
     background-position: center;
 }
@@ -319,7 +321,7 @@ gap тут 24 вместо 25 у грида, чтобы перенос корр�
 /* секция about*/
 
 .about {
-    margin-top: 110px;
+    margin-top: 104px;
     padding: 0 24px 0 24px;
     width: 100%;
     display: grid;
@@ -327,7 +329,7 @@ gap тут 24 вместо 25 у грида, чтобы перенос корр�
 }
 
 .about-logo {
-    margin: 36px 0 0 48px;
+    margin: 38px 0 0 48px;
     width: 240px;
     display: flex;
     justify-content: center;
@@ -362,7 +364,7 @@ gap тут 24 вместо 25 у грида, чтобы перенос корр�
 /* секция с футером*/
 
 .footer {
-    margin-top: 124px;
+    margin-top: 128px;
     display: grid;
     padding: 52px 50px 60px 50px;
     grid-template-columns: 1fr 1fr 1fr;
