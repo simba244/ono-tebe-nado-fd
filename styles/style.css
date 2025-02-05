@@ -1,4 +1,3 @@
-/* место для вашего кода */
 
 
 .header {
@@ -38,7 +37,6 @@
 .text-decoration {
     text-underline-offset: 4px;
 }
-
 
 .header-logo {
     display: block;
@@ -142,7 +140,6 @@
     text-transform: uppercase;
     position: relative;
 }
-
 
 .button {
     display: flex;
@@ -310,9 +307,6 @@
     height: 240px;
 }
 
-/* Заголовок и текст изначально были в разных ячейках. Но потом понял что это не лучший вариант. Переделываю на флексы
-По итогу класс about-title оказался лишним.*/
-
 .about-title {
     margin-top: 138px;
     display: flex;
@@ -376,16 +370,12 @@
     text-underline-offset: 4px;
 }
 
-
-
-
 .footer-social-list-item {
     list-style-type: none;
     display: flex;
     justify-content: end; 
     gap: 24px;
 }
-
 
 .footer-social-icon {
     width: 48px;
