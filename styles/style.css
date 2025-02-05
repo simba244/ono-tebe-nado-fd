@@ -33,7 +33,7 @@
 
 .header {
     display: grid;
-    padding: 92px 50px 96px 50px;
+    padding: 90px 50px 96px 50px;
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
     background-color: #fff;
@@ -321,7 +321,7 @@ gap тут 24 вместо 25 у грида, чтобы перенос корр�
 /* секция about*/
 
 .about {
-    margin-top: 104px;
+    margin-top: 108px;
     padding: 0 24px 0 24px;
     width: 100%;
     display: grid;
