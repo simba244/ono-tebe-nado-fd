@@ -34,6 +34,7 @@
 }
 
 /* Теперь этот класс я могу переиспользовать в футтере*/
+.menu-item {
     list-style-type: circle;
     text-transform: lowercase;
     font-family: "Raleway", sans-serif;
@@ -56,7 +57,9 @@
     text-decoration: none;
 }
 
-    /* Создал общую сущность для <a>*/
+/* Создал общую сущность для <a>*/
+.menu-item-link {
+
 }
 
 .address-link {
