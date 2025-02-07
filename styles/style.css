@@ -30,7 +30,6 @@
 
 .header-menu-list {
     display: flex;
-    justify-content: start;
     gap: 34px;
     list-style-type: circle;
     text-transform: lowercase;
@@ -384,17 +383,6 @@ gap тут 24 вместо 25 у грида, чтобы перенос корр�
     grid-column: 2 / 3;
 }
 
-.footer-menu-list {
-    list-style-type: none;
-    text-align: center;
-    text-transform: lowercase;
-    font-family: "Raleway", sans-serif;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 24, 3px;
-    color: #000;
-    text-underline-offset: 4px;
-}
 
 .footer-social-list-item {
     list-style-type: none;
